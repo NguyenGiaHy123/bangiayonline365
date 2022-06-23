@@ -12,6 +12,5 @@ const CartsSchema=mongoose.Schema({
   payment: { type: String, required: true },
   success: { type: Boolean, required: true },
   status_order: { type: Boolean, required: true },
- 
 })
 module.exports = mongoose.model('Cart', CartsSchema);
