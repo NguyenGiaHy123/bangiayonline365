@@ -3,7 +3,6 @@ const product=require('../Modal/Products')
 const mongoose=require('mongoose')
 const moment=require('moment');
 const User = require('../Modal/User');
-
 const momentFormat=moment().format()
 class CommentController{
     async get_Comment_id(rq,rs) {

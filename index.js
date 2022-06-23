@@ -47,7 +47,7 @@ const server =require('http').createServer(app);
 /* thiet lâp cors cho socket io */
 const io=require('socket.io')(server,{
   cors: {
-    origin: "http://shopgiay.nguyengiahy",
+    origin: "https://bangiayonline24h-owerhy.herokuapp.com/",
     methods: ["GET", "POST", "DELETE", "PUT"],
     allowedHeaders: [
       "Access-Control-Allow-Origin",
@@ -380,7 +380,7 @@ let userComment=[];
         console.log(err)
       }
     })
-
+     
     //update information
 
     socket.on('userUpdateInformation',async(dataInformation)=>{
@@ -417,8 +417,6 @@ let userComment=[];
             }
             io.sockets.emit("sersendReplyComment",userupdate)
           }
-           
-          
          }
       }
       catch(err){

@@ -71,7 +71,7 @@ class ProductControllers{
    async getProductNsx(rq,rs){
     try{
         const {NSX,price,page,limit}=rq.query;
-        const nsxCurrent=NSX.toLowerCase();
+        const nsxCurrent=NSX.replace(/-/g, ' ').toLowerCase();
         const priceCurrent=parseInt(price)||0;
         const pageCurrent=parseInt(page);
         const limitCurrent=parseInt(limit);

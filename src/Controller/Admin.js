@@ -3,6 +3,7 @@ const { request } = require("express")
 
 class controlAdmin{
    async  addProduct(rq,rs){
+    
    
     // return rs.json(rq)
        
