@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+ <script src="https://cdn.socket.io/4.5.0/socket.io.min.js" integrity="sha384-7EyYLQZgWBi67fBtVxw60/OWl1kjsfrPFcaU0pp0nAh+i8FD068QogUvg85Ewy1k" crossorigin="anonymous"></script>
+<body bgcolor="pink">
+    <script>
+        var socket=io('http://localhost:3000');
+        $(document).ready(()=>{
+              $("#taoromd").click(()=>{
+                 const valcomment=$("#valcomment").val();
+                    const sendata={
+                  token:"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6eyJfaWQiOiI2MjlmNTQyYTBhMzY4MTYwMmRkZjBkYzgiLCJuYW1lIjoibmd1eWVuIGdpYSBraGFuZyIsImVtYWlsIjoiZ2lhaHluZ3V5ZW4zM0BnbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMiRJOTVZdXZGVVdNQ3hIcklPRnVEenBlcktILjVRdFZ5c1NiQzNPcHdaaS9LRzFKUE04UDFicSIsInJvbGUiOjAsImF2YXRhciI6Imh0dHBzOi8vcmVzLmNsb3VkaW5hcnkuY29tL3VwbG9hZGltZ2FnZW5vZGVqc3dlYmdpYXkvaW1hZ2UvdXBsb2FkL3YxNjU0Njk2NjQ5L3ljbG1kcHNubnZnaHdwcmgwZm5iLmpwZyIsIkNyZWF0ZUF0IjoiMjAyMi0wNi0wN1QyMDozNTozNiswNzowMCIsIl9fdiI6MH0sImlhdCI6MTY1NTM5NDQzNCwiZXhwIjoxNjU3OTg2NDM0fQ.gf4R7I2KkvzoZoVQXGAqmIqyY9TpPWmEssR-qFWlUBc",
+                 _id_user:"629f542a0a3681602ddf0dc8",
+                  name:"update ten roi ne",
+                  contentComment:"hy xau lam nha",
+                 _id_product:'62a2fc118e7aad9367feeecd',
+                  star:4,
+                  send:"replyComment",
+                  idComment:'62b01bea7baa254fa40bb7d3'
+            }
+            
+                socket.emit("userUpdateInformation",sendata) 
+              })
+        })
+    
+
+ socket.on("sersendReplyComment",(data)=>{
+    console.log(data)
+  })
+    
+        
+    </script>
+    <style>
+     
+    </style>
+     <form action="http://localhost:3000/api/user/update-image" class="mt-5" method="Post">
+        <div class="container">
+            <form  class="p-5 border border-dark mt-5" id="loginform">
+                <input type="text" placeholder="nhap comment" class="form-control" id="valcomment"/><br>
+                <input type="button" style="float: right;"  class="btn btn-primary" id="taoromd" value="comment"/>
+            </form>
+
+          
+     </form>
+    
+      
+</body>
+</html>

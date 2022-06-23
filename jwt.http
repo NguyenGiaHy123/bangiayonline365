@@ -1,0 +1,16 @@
+Get http://localhost:3000
+###
+POST  http://localhost:3000/login
+{
+    "usename":"nguyen gia hy"
+}
+
+###
+POST  http://localhost:3000/api/user/refresh-token
+Content-Type: application/json
+
+{
+ "refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6eyJfaWQiOiI2MjllMDc3Nzc5OGIxOGFlY2NjNDIzYmEiLCJuYW1lIjoibmd1eWVuIGdpYSBoeSIsImVtYWlsIjoiZ2lhaHluZ3V5ZW4zM0BnbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMiRnRGFqSi80V2YxbHc3OGRva3J3S0JPb2JWQkZrYW9VUnhKN0oxYndGNzlSNjI2S2VSdnFSYSIsInJvbGUiOjAsImF2YXRhciI6Imh0dHBzOi8vcG5nLnBuZ3RyZWUuY29tL3BuZy12ZWN0b3IvMjAxOTA5MTkvb3VybGFyZ2UvcG5ndHJlZS11c2VyLWxvZ2luLW9yLWF1dGhlbnRpY2F0ZS1pY29uLW9uLWdyYXktYmFja2dyb3VuZC1mbGF0LWljb24tdmUtcG5nLWltYWdlXzE3NDIwMzEuanBnIiwiQ3JlYXRlQXQiOiIyMDIyLTA2LTA2VDIwOjUzOjA4KzA3OjAwIiwiX192IjowfSwiaWF0IjoxNjU0NTI1NzA3fQ.HeJrjzPB6sCd-9enTjlXuSpnjysHFtAJPyXLJXPpeU4"
+}
+
+content
