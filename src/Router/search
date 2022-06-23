@@ -1,0 +1,5 @@
+const express=require('express');
+const Route=express.Router();
+const ControllerSearch=require('../Controller/Search');
+Route.get('/searchProduct',ControllerSearch.searchProduct)
+module.exports=Route

@@ -53,7 +53,6 @@ class Menu{
           ,
           Puma: [... new Set(NXSPuma)],
           Converse: [... new Set(NXSConverse)]
-          
          })
     }
 
