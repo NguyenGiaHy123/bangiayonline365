@@ -10,6 +10,7 @@ class Menu{
           NXSVans=[],
          NXSPuma=[],
          NXSConverse=[];
+        
 
          const Adidas=await Products.find({key:'adidas'});
          const Nike=await Products.find({key:'nike'});
@@ -17,7 +18,7 @@ class Menu{
          const Vans=await Products.find({key:'vans'});
          const Puma=await Products.find({key:'puma'});
          const Converse=await Products.find({key:'converse'});
-
+           
          Adidas.forEach((value)=>{
           NXSAdidas.push(value.NSX)
          })
