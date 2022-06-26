@@ -110,7 +110,8 @@ let userComment=[];
         }
           const check=countUserOnline.every((user)=>user.userId!=socket.id);
           const resultView=await view.findById(process.env.ID_VIEW);
-          const resultUpdate = await view.findByIdAndUpdate(process.env.ID_VIEW, { View: resultView.View + 1 }, { new: true });
+          
+          const resultUpdate = await view.findByIdAndUpdate(resultView._id, { View: resultView.View + 1 }, { new: true });
          if(check){
            countUserOnline.push(user);
            socket.join(user.room)
