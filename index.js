@@ -47,7 +47,7 @@ const server =require('http').createServer(app);
 /* thiet lâp cors cho socket io */
 const io=require('socket.io')(server,{
   cors: {
-    origin: "http://localhost:3000",
+    origin: "http://localhost:3001",
     methods: ["GET", "POST", "DELETE", "PUT"],
     allowedHeaders: [
       "Access-Control-Allow-Origin",
