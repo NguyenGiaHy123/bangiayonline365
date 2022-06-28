@@ -23,7 +23,7 @@ app.engine('handlebars', hbs.engine);
  app.set('views',path.join(__dirname,'views'))
 
 /*==========================================================*/
-
+app.use(cors());
 /*=====body parser =========*/
 app.use(bodyparser.urlencoded({extended:true}))
 app.use(bodyparser.json())
@@ -31,7 +31,7 @@ app.use(express.json())
 
 /*==========================================================*/
 //----thiết lập cors cho server ---
-app.use(cors());
+
 app.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
   res.header(
@@ -61,14 +61,13 @@ const io=require('socket.io')(server,{
 
 
 const view=require('./src/Modal/View');
-const cart=require('./src/Modal/Carts');
+
 const comment=require('./src/Modal/Comment');
 const product=require('./src/Modal/Products');
 const user=require('./src/Modal/User');
-const { Socket } = require('socket.io');
-const Comment = require('./src/Modal/Comment');
+
+
 const { default: mongoose } = require('mongoose');
-const { array } = require('./src/Multer/multer');
 
 
 
